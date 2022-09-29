@@ -73,5 +73,6 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.home__blob`, {origin: 'right'})
-sr.reveal(`.home__data`, {origin: 'left'})
+sr.reveal(`.home__data, .banner__data`, {origin: 'left'})
+sr.reveal(`.banner__img`, {origin: 'bottom'})
 // ===== end scroll reveal animation ===== //
