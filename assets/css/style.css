@@ -107,19 +107,10 @@ img{
    border-bottom: 1px solid var(--title-color);
    padding-bottom: 3.5rem;
 }
-.section__title, 
-.section__subtitle{
-   text-align: center;
-}
 .section__title{
    font-size: var(--h1-font-size);
    font-weight: var(--font-semi-bold);
-   margin-bottom: .25rem;
-}
-.section__subtitle{
-   display: block;
-   font-size: var(--small-font-size);
-   color: var(--text-color-light);
+   text-align: center;
    margin-bottom: 3rem;
 }
 .main{
@@ -145,7 +136,7 @@ img{
 /* ===== BUTTONS ===== */
 .button{
    display: inline-block;
-   padding: 18px 32px;
+   padding: 15px 32px;
    color: var(--title-color);
    text-transform: uppercase;
    font-weight: var(--font-medium);
@@ -390,10 +381,130 @@ img{
 }
 /* ===== end home ===== */
 
+/* ===== SERVICES ===== */
+.services__container{
+   grid-gap: 2rem;
+}
+.services__card{
+   position: relative;
+   background-color: var(--container-color);
+   padding: 2rem 1.5rem;
+}
+.service__icon{
+   width: -webkit-max-content;
+   width: -moz-max-content;
+   width: max-content;
+   color: var(--body-color);
+   padding: 1rem;
+   background-color: #8BC6EC;
+   background-image: -webkit-linear-gradient(315deg, #8BC6EC 0%, #9599E2 100%);
+   background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+   margin-bottom: 1rem;
+}
+.services__card i{
+   display: block;
+   font-size: 2rem;
+   -webkit-transition: -webkit-transform .8s;
+   transition: -webkit-transform .8s;
+   transition: transform .8s;
+   transition: transform .8s, -webkit-transform .8s;
+}
+.services__title{
+   font-size: var(--h2-font-size);
+   font-weight: var(--font-semi-bold);
+   margin-bottom: .75rem;
+}
+.services__border{
+   width: 100%;
+   border: 1.8px solid var(--text-color-light);
+   position: absolute;
+   inset: 0;
+   left: -10px;
+   margin: auto;
+   -webkit-transition: opacity .6s;
+   transition: opacity .6s;
+   opacity: 0;
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+.services__card:hover i{
+   -webkit-transform: rotateY(360deg);
+           transform: rotateY(360deg);
+}
+.services__card:hover .services__border{
+   opacity: 1;
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+/* ===== end services ===== */
+
+/* ===== QUESTIONS ===== */
+.questions__container{
+   padding: 1.5rem 0;
+}
+.questions__item{
+   background-color: var(--container-color);
+   border-radius: .25rem;
+   padding: 0 .75rem;
+}
+.questions__header{
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+           justify-content: space-between;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-column-gap: .5rem;
+      -moz-column-gap: .5rem;
+           column-gap: .5rem;
+   padding: .75rem .5rem;
+   cursor: pointer;
+}
+.questions__item-title{
+   font-weight: var(--font-medium);
+}
+.questions__icon{
+   font-size: 1.25rem;
+   color: var(--title-color);
+}
+.questions__content{
+   overflow: hidden;
+   height: 0;
+}
+.questions__description{
+   padding: 0 1.25rem 1.25rem 2rem;
+}
+.questions__item,
+.questions__header,
+.questions__item-title,
+.questions__icon,
+.questions__description,
+.questions__content{
+   -webkit-transition: .3s;
+   transition: .3s;
+}
+.questions__item:hover{
+   box-shadow: 0 2px 8px hsla(var(--hue), 4%, 15%, .15);
+}
+
+/* Rotate icon, change color of titles and background */
+.accordion-open .questions__icon{
+   -webkit-transform: rotate(45deg);
+           transform: rotate(45deg);
+}
+.accordion-open.questions__item{
+}
+.accordion-open .questions__item-title{
+   border-bottom: 1px solid gray;
+   padding-bottom: 0.25rem;
+}
+/* ===== end questions ===== */
+
 /* ===== BANNER ===== */
 .banner__container{
    background-color: var(--container-color);
-   padding: 2rem 1.25rem 0;
+   padding: 2rem 1.5rem 0;
    border-radius: 2rem;
    overflow: hidden;
 }
@@ -506,10 +617,18 @@ img{
    }
    /* ===== end home ===== */
 
+   /* ===== SERVICES + QUESTIONS ====== */
+   .services__container,
+   .questions__container{
+      -ms-grid-columns: (1fr)[2];
+          grid-template-columns: repeat(2, 1fr);
+   }
+   /* ===== end services + questions ===== */
+
    /* ===== BANNER ===== */
    .banner__container{
       position: relative;
-      padding: 3rem 1.5rem 9rem;
+      padding: 3rem 1.75rem 9rem;
    }
    .banner__img{
       position: absolute;
