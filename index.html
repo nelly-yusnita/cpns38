@@ -90,10 +90,10 @@
 		<!-- ===== end home ===== -->
 
 		<!-- ===== SERVICES ===== -->
-		<section class="services section" id="services">
+		<section class="services container section" id="services">
 			<h2 class="section__title">Benefit Belajar Pintar Bersama CPNS38</h2>
 
-			<div class="services__container container grid section__border">
+			<div class="services__container grid section__border">
 				<div class="services__card">
 					<div class="service__icon">
 						<i class="ri-layout-4-line"></i>
@@ -146,15 +146,14 @@
 					<div class="services__border"></div>
 				</div>
 			</div>
-
 		</section>
 		<!-- ===== end services ===== -->
 
 		<!-- ===== QUESTIONS ===== -->
-		<section class="questions section" id="services">
+		<section class="questions container section" id="services">
 			<h2 class="section__title">Pertanyaan Seputar CPNS38</h2>
 
-			<div class="questions__container container grid section__border">
+			<div class="questions__container grid section__border">
 				<div class="questions__group grid">
 					<div class="questions__item">
 						<header class="questions__header">
@@ -259,8 +258,12 @@
 		<!-- ===== end questions ===== -->
 
 		<!-- ===== BANNER ===== -->
-		<section class="banner section">
-			<div class="banner__container container grid">
+		<section class="banner section container section__border">
+			<div class="banner__container grid">
+				<div class="banner__border">
+					<img src="assets/img/banner-img.png" alt="" class="banner__img">
+				</div>
+
 				<div class="banner__data">
 					<h1 class="banner__title">Sudah Siap untuk Lulus Seleksi CPNS?</h1>
 					<p class="banner__description">Yuk mulai belajar hari ini dan bersiap untuk bersaing dengan jutaan peserta lainnya!</p>
@@ -269,8 +272,6 @@
 						Daftar Gratis <i class="ri-arrow-right-line"></i>
 					</a>
 				</div>
-
-				<img src="assets/img/banner-img.png" alt="banner image" class="banner__img">
 			</div>
 		</section>
 		<!-- ===== end banner ===== -->
@@ -278,13 +279,69 @@
    <!-- ===== end main ===== -->
 
    <!-- ===== FOOTER ===== -->
-   <footer class="footer">
-		<div class="footer__container container section__border">
+	<footer class="footer">
+		<div class="footer__container container">
+			<h1 class="footer__title">CPNS38</h1>
+
+			<ul class="footer__list">
+				<li>
+					<a href="#home" class="footer__link">Home</a>
+				</li>
+				<li>
+					<a href="#skills" class="footer__link">Skills</a>
+				</li>
+				<li>
+					<a href="#projects" class="footer__link">Projects</a>
+				</li>
+			</ul>
+
+			<ul class="footer__social">
+				<a href="https://www.linkedin.com/" target="_blank" class="footer__social-link">
+					<i class="ri-linkedin-box-line"></i>
+				</a>
+
+				<a href="https://github.com/" target="_blank" class="footer__social-link">
+					<i class="ri-github-line"></i>
+				</a>
+
+				<a href="https://dribbble.com/" target="_blank" class="footer__social-link">
+					<i class="ri-dribbble-line"></i>
+				</a>
+			</ul>
+
+			<span class="footer__copy">
+				&#169; Copyright CPNS38. All rights reserved
+			</span>
 		</div>
 	</footer>
-   <!-- ===== end footer ===== -->
+	<!-- ===== end footer ===== -->
 
-   <!-- ===== SCROLLREVEAL ===== -->
+	<!-- ===== MODAL ===== -->
+	<section class="modal" id="modal">
+		<div class="modal__container container">
+			<div class="modal__content" id="modal-content">
+				<h3 class="modal__title">Teman Belajar Pejuang ASN</h3>
+				<p class="modal__description">Belajar persiapan CPNS super lengkap dan hemat bersama CPNS38</p>
+
+				<img src="assets/img/modal-img.png" alt="" class="modal__img">
+
+				<a href="#" class="button button__flex button__blue">
+					Daftar Sekarang <i class="ri-arrow-right-line"></i>
+				</a>
+
+				<button class="modal__button-close" id="close-modal">Nanti Saja</button>
+			</div>
+		</div>
+	</section>
+	<!-- ===== end modal ==== -->
+
+	<!-- ===== SCROLL UP ===== -->
+	<a href="#" class="scrollup" id="scrollup">
+		<i class="ri-arrow-up-line"></i>
+	</a>
+	<!-- ===== end scroll up ===== -->
+
+	<!-- ===== SCROLLREVEAL ===== -->
 	<script src="assets/js/scrollreveal.min.js"></script>
 
 	<!-- ===== MAIN JS ===== -->

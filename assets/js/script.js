@@ -26,7 +26,6 @@ const navLink = document.querySelectorAll('.nav__link');
 function linkAction(){
 	const navMenu = document.getElementById('nav-menu')
 
-	// When we click on each nav__link, we remove the show-menu class
 	navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
@@ -57,7 +56,6 @@ window.addEventListener('scroll', scrollActive);
 function scrollHeader(){
 	const header = document.getElementById('header')
 
-	// When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
 	if(this.scrollY >= 50) header.classList.add('bg-header'); else header.classList.remove('bg-header')
 }
 window.addEventListener('scroll', scrollHeader);
@@ -93,7 +91,35 @@ const toggleItem = (item) =>{
 }
 // ===== end questions accordion ===== //
 
-// ===== SCROLL REVEAL ANIMATION ===== //
+// ===== MODAL ===== //
+const modal = document.getElementById('modal'),
+		modalContent = document.getElementById('modal-content'),
+		closeModal = document.getElementById('close-modal');
+
+function openModal(){
+	setTimeout(() =>{
+		modal.style.visibility = 'visible';
+		modal.style.opacity = 1;
+		modalContent.style.transform = 'scale(1) translateY(0)';
+	}, 5500)
+
+	closeModal.addEventListener('click', ()=>{
+		modal.style.display = 'none';
+	})
+}
+window.addEventListener('scroll', openModal);
+// ===== end modal ===== //
+
+// ===== SCROLL UP ===== //
+function scrollUp(){
+	const scrollUp = document.getElementById('scrollup');
+
+	if(this.scrollY >= 350) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp);
+// ===== end scroll up ===== //
+
+// ===== SCROLL REVEAL ANIMATION ==== //
 const sr = ScrollReveal({
 	origin: 'top',
 	distance: '60px',
@@ -102,7 +128,10 @@ const sr = ScrollReveal({
 	// reset: true// animation repeat //
 })
 
-sr.reveal(`.home__blob`, {origin: 'right'})
-sr.reveal(`.home__data, .banner__data`, {origin: 'left'})
-sr.reveal(`.banner__img`, {origin: 'bottom'})
+sr.reveal(`.home__blob, .section__title, .footer__container`)
+sr.reveal(`.home__data`, {delay: 100})
+sr.reveal(`.services__card`, {interval: 100})
+sr.reveal(`.questions__container`, {delay: 50})
+sr.reveal(`.banner__border`, {origin: 'left'})
+sr.reveal(`.banner__data`, {origin: 'right'})
 // ===== end scroll reveal animation ===== //
